@@ -1,108 +1,66 @@
 import React from 'react'
-import { Nav, Navbar } from 'react-bootstrap'
+import { Col, Nav, Navbar, NavbarBrand } from 'react-bootstrap'
 import Link from 'next/link'
-import { useAuth } from '../context/AuthContext'
 import { useRouter } from 'next/router'
 import Image from 'next/image';
 import favicon from '../assets/favicon.ico'
 import styles from '../styles/navbar.module.css'
 
 const NavbarComp = () => {
-  const { user, logout } = useAuth()
-  const router = useRouter()
-
   return (
-      <Navbar expand="xl" sticky='top' className={styles.navBar}
-      style={{
-        height:'130px',
-        boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
-      }}
-      >
-        <Link href="/"  passHref legacyBehavior>
-          <Nav.Link className={styles.brandIconHover}>
-            <Image 
-            className='shadow-lg'
-            style={{
-              marginLeft: '30px',
-              marginRight: '30px',
-            }}
-              width="80" height="80"
-              src={favicon}
-              alt='logo'
+    //   <Navbar expand="xl" sticky='top' className={styles.navBar}
+    //   style={{
+    //     height:'70px',
+    //     marginTop:'0.9rem',
+    //     fontSize:'2rem'
+    //   }}
+    //   >
+    //     <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    //       <Navbar.Collapse>  
+    //         <Nav className='container-fluid'>
+    //           <Nav.Item className='ms-auto'>
+    //             <Nav.Link href='/faq' className='' aria-current="page">
+    //               FAQ
+    //             </Nav.Link>
+    //           </Nav.Item>
+    //           <Nav.Item className='ms-auto'>
+    //             <Nav.Link href='/about' className='' aria-current="page">
+    //               about
+    //             </Nav.Link>
+    //           </Nav.Item>
+    //         </Nav>
+    //     </Navbar.Collapse>
+    // </Navbar>
+    <Navbar className="main white nav-margins" expand="lg">
+      <Col>
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mx-auto parent">
+            <Nav.Link href='/faq' className='' aria-current="page">
+              FAQ
+            </Nav.Link>
+            <Nav.Link href='/about' className='' aria-current="page">
+              about
+            </Nav.Link>
+          </Nav>
+      </Navbar.Collapse>
+      </Col>
+      <Col>
+          <Link href="/" passHref legacyBehavior>
+            <Nav.Link className={`${styles.brandIconHover} d-flex justify-content-center`}>
+              <Image 
+                style={{
+                  marginLeft: '30px',
+                  marginRight: '30px',
+                }}
+                src={favicon}
+                alt='logo'
             />
           </Nav.Link>
         </Link>
+      </Col>
+      <Col className="text-left">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse>
-          <Nav
-          >
-            {user ? (
-              <Nav.Item className="ms-auto display-2">
-                <Nav.Link className='' 
-                  onClick={() => {
-                    router.push('/dashboard')
-                  }}
-                >
-                  dashboard
-                </Nav.Link>
-              </Nav.Item>
-            ) : (
-              <>
-              </>
-            )}
-          </Nav>
-        <Nav className='container-fluid'>
-            {user ? (
-              <>
-              </>//if not logged in show btn
-            ) : (
-              <>
-                <Nav.Item className='display-2 ms-auto'>
-                  <Nav.Link href='/about' className='' aria-current="page">
-                    about
-                  </Nav.Link>
-                </Nav.Item>
-              </>
-            )}
-        </Nav>
-        <Nav className='container-fluid'>
-            {user ? (
-              <>
-              </>//if not logged in show btn
-            ) : (
-              <>
-                <Nav.Item className='display-2 ms-auto'>
-                  <Nav.Link href='/faq' className='' aria-current="page"
-                  >
-                    FAQ
-                  </Nav.Link>
-                </Nav.Item>
-              </>
-            )}
-        </Nav>
-        <Nav className='container-fluid'>
-          {user ? (
-            <Nav.Item className="ms-auto display-2">
-              <Nav.Link className=''
-                onClick={() => {
-                  logout()
-                  router.push('/login')
-                }}
-              >
-                logout
-              </Nav.Link>
-            </Nav.Item>
-          ) : (
-            <>
-              <Nav.Item className='ms-auto display-2'>
-                <Nav.Link href='/login' className='' aria-current="page">
-                  login
-                </Nav.Link>
-              </Nav.Item>
-            </>
-          )}
-        </Nav> 
-          </Navbar.Collapse>
+      </Col>
     </Navbar>
   );
 }
