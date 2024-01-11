@@ -8,7 +8,7 @@ const About = () => {
       marginTop: '100px'
     }}
     >
-      For Students, By Students
+      make da world green
     </div>
       
   )
