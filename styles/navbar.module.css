@@ -1,5 +1,11 @@
 .navBar {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size:'10px';
+    background-color: '';
+}
+
+.navSearch {
+    background-color: aquamarine;
 }
 
 .Nav.Link[aria-current] {

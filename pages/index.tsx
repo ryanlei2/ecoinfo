@@ -9,12 +9,15 @@ import { useState } from 'react'
 
 
 const Home: NextPage = () => {
-
-  const [isHovered, setIsHovered] = useState(false);
   return (
-      <div>
-        
-      </div>
+      <main>
+        <div className='hero'>
+          {/* split this section into 2 parts: one for the text and the subtext, and one for the image */}
+        </div>
+        <div className='cta'>
+          {/* same as above except text is on the right instead of left */}
+        </div>
+      </main>
   );
 }
 
