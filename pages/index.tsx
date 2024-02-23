@@ -164,17 +164,17 @@ const Home: NextPage = () => {
           <Card className={`${styles.card} ${isHovered1 ? styles.cardHover : ''}`} 
                   onMouseEnter={() => setIsHovered1(true)}
                   onMouseLeave={() => setIsHovered1(false)}
-                border="success" style={{ width: '40vw', marginRight: '100px' }}>
+                border="success" style={{ width: '40vw', height:'30vh', marginRight: '100px' }}>
             <Card.Img variant="top" src='https://cdn.discordapp.com/attachments/1046981658617860186/1087508397890478272/faq4.png' style={{marginBottom: '50px', marginTop: '40px'}}/>
             <Card.Body>
               <Card.Title className='display-6'
               style={{
                 fontWeight:'bold',
-                fontSize: '70px'
+                fontSize: '2.7rem'
               }}
               >FAQ</Card.Title>
               <Card.Text style={{
-                fontSize:'2.7rem'
+                fontSize:'100%'
               }}>
                 Have a question you need answered?
               </Card.Text>
@@ -186,17 +186,17 @@ const Home: NextPage = () => {
           <Card className={`${styles.card} ${isHovered2 ? styles.cardHover : ''}`} 
                   onMouseEnter={() => setIsHovered2(true)}
                   onMouseLeave={() => setIsHovered2(false)} 
-                border="success" style={{ width: '40vw', marginLeft:'100px' }}>
+                border="success" style={{ width: '40vw', height: '30vh', marginLeft:'100px' }}>
             <Card.Img style={{marginBottom: '50px', marginTop: '40px'}} variant="top" src="https://cdn.discordapp.com/attachments/1046981658617860186/1087514783252762654/catalog2.png" />
             <Card.Body>
               <Card.Title className='display-6'
               style={{
                 fontWeight:'bold',
-                fontSize: '70px'
+                fontSize: '2.7rem'
               }}
               >Pricing</Card.Title>
               <Card.Text style={{
-                fontSize:'2.7rem'
+                fontSize:'100%'
               }}>
                 Take a look at some of the costs with green energy!
               </Card.Text>              
