@@ -183,7 +183,7 @@ const Home: NextPage = () => {
                 Have a question you need answered?
               </Card.Text>
                 <Link href="/faq">
-                  <Button style={{height: '50px', width: '100px', fontSize: '1rem', marginBottom:'40px'}} variant="primary">Click Here</Button>
+                  <Button style={{height: '55px', width: '100px', fontSize: '1rem', marginBottom:'40px'}} variant="primary">Click Here</Button>
                 </Link>
             </Card.Body>
           </Card>
@@ -205,7 +205,7 @@ const Home: NextPage = () => {
                 Take a look at some of the costs with green energy!
               </Card.Text>              
               <Link href="/cost">
-                  <Button style={{height: '50px', width: '100px', fontSize: '1rem'}} variant="primary">Click Here</Button>
+                  <Button style={{height: '55px', width: '100px', fontSize: '1rem'}} variant="primary">Click Here</Button>
                 </Link>
             </Card.Body>
           </Card>
