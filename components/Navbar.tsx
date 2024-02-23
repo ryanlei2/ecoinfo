@@ -14,6 +14,7 @@ const NavbarComp = () => {
         marginTop: '10px',
         marginBottom: '10px',
         fontFamily: '',
+        fontSize: '30px'
       }}>
             <Link href="/" passHref legacyBehavior>
               <Nav.Link className={`${styles.brandIconHover} d-flex justify-content-center`}>
@@ -21,8 +22,8 @@ const NavbarComp = () => {
                   style={{
                     marginLeft: '30px',
                     marginRight: '5px',
-                    width:'20px',
-                    height: '20px'
+                    width:'40px',
+                    height: '40px'
                   }}
                   src={favicon}
                   alt='logo'

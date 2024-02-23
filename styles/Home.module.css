@@ -1,4 +1,73 @@
-.bannerText {
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the container takes up at least the full height of the viewport */
+  background: linear-gradient(to bottom, rgb(240, 255, 241), rgb(200, 255, 220)); /* Apply linear gradient */
+}
+.container2 {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the container takes up at least the full height of the viewport */
+  background: linear-gradient(to bottom, rgb(200, 255, 220), rgb(255, 255, 255)); /* Apply linear gradient */
+}
+
+.hero,
+.cta {
+  flex: 3; /* Update to reflect the new split */
+  display: flex;
+  justify-content: center; /* Align content horizontally in the center */
+  align-items: center; /* Align content vertically in the center */
+}
+
+.leftHalf {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the start */
+  align-items: flex-start; /* Align content to the start */
+  text-align: left; /* Align text content to the left */
+}
+
+.leftHalf strong {
+  font-size: 60px; /* Adjust font size */
+  margin-bottom: 20px; /* Add margin between the two text elements */
+  letter-spacing: 1.5px; /* Add more space between letters */
+  font-weight: 500; /* Thin the text */
+}
+
+.rightHalf {
+  flex: 3; /* Adjusted to 30% of the hero section */
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  position: relative; /* Position the .threeJsSceneContainer relative to this */
+}
+
+.rightHalf img {
+  /* max-width: 100%; Ensure the image doesn't exceed the container */
+  height: 100vh;
+}
+
+.threeJsSceneContainer {
+  width: 50%;
+  height: 50%;
+  margin-bottom: 90px;
+  position: absolute;
+  top: 25%; /* Move the container to the vertical center */
+  left: 35%; /* Move the container to the horizontal center */
+  z-index: 1;
+}
+
+
+.heroImage {
+  position: absolute;
+  right: 0; /* Align the image to the right within its container */
+  top: 0; /* Align the image to the top within its container */
+  height: 100%; /* Ensure the image fills the entire height of its container */
+}
+
+
+/* .bannerText {
   opacity: 0;
   animation-name: fadeIn;
   animation-fill-mode: forwards;
@@ -32,4 +101,4 @@
     opacity: 1;
   }
 }
-
+ */

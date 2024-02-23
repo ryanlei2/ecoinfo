@@ -6,15 +6,19 @@ const Footer = () => {
         <footer style={{
             backgroundImage: `url(${backgroundImage.src})`,
             backgroundSize: 'cover',
-            // backgroundColor: 'skyblue',
             textAlign: 'center',
             padding: '20px 0',
-            position: 'absolute',
+            position: 'relative', /* Make the footer position relative */
             bottom: '0',
             width: '100%',
-            height: '30%'
+            height: '50vh',
+            display: 'flex',
+            justifyContent: 'flex-end',
+            alignItems: 'flex-end',
         }}>
-            Designed and Coded with ❤️💛❤️ by RHS © 2023
+            <div style={{ position: 'absolute', bottom: '10px', width: '100%' }}>
+                Designed and Coded with ❤️💛❤️ by RHS © 2023
+            </div>
         </footer>
     );
 };
