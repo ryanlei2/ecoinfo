@@ -1,0 +1,5 @@
+@media (max-width: 1200px) {
+    .cube {
+      display: none; /* Hide the container for smaller viewports */
+    }
+  }

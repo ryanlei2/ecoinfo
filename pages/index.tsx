@@ -100,10 +100,6 @@ const Home: NextPage = () => {
     };
     
     animate();
-
-
-
-
     // Clean up
     return () => {
       if (mountRef.current) {
@@ -168,7 +164,7 @@ const Home: NextPage = () => {
           <Card className={`${styles.card} ${isHovered1 ? styles.cardHover : ''}`} 
                   onMouseEnter={() => setIsHovered1(true)}
                   onMouseLeave={() => setIsHovered1(false)}
-                border="success" style={{ width: '40rem', marginRight: '100px' }}>
+                border="success" style={{ width: '40vw', marginRight: '100px' }}>
             <Card.Img variant="top" src='https://cdn.discordapp.com/attachments/1046981658617860186/1087508397890478272/faq4.png' style={{marginBottom: '50px', marginTop: '40px'}}/>
             <Card.Body>
               <Card.Title className='display-6'
@@ -190,7 +186,7 @@ const Home: NextPage = () => {
           <Card className={`${styles.card} ${isHovered2 ? styles.cardHover : ''}`} 
                   onMouseEnter={() => setIsHovered2(true)}
                   onMouseLeave={() => setIsHovered2(false)} 
-                border="success" style={{ width: '40rem', marginLeft:'100px' }}>
+                border="success" style={{ width: '40vw', marginLeft:'100px' }}>
             <Card.Img style={{marginBottom: '50px', marginTop: '40px'}} variant="top" src="https://cdn.discordapp.com/attachments/1046981658617860186/1087514783252762654/catalog2.png" />
             <Card.Body>
               <Card.Title className='display-6'
@@ -212,7 +208,9 @@ const Home: NextPage = () => {
         </Row>
         </div>
       </div>
-      <div className={styles.carouselWrapper}>
+      <div className={styles.carouselWrapper}style={{
+        background: 'black'
+      }}>
       <Carousel interval={3000}>
       <Carousel.Item>
         <img

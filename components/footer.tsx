@@ -1,6 +1,8 @@
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import backgroundImage from '../assets/footerVector.png';
 import Cube from '../pages/Cube'; // Import the Cube component
+import styles from '../styles/footer.module.css'
+
 
 const Footer = () => {
     return (
@@ -44,7 +46,9 @@ const Footer = () => {
                     </Row>
                 </Container>
             </div>
-            <Cube /> {/* Include the Cube component */}
+            <div className={styles.cube}>
+                <Cube /> {/* Include the Cube component */}
+            </div>
         </footer>
     );
 };

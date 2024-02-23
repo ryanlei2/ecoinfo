@@ -1,5 +1,6 @@
 
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Ensure the container takes up at least the full height of the viewport */
@@ -89,12 +90,19 @@
 }
 
 .carouselWrapper {
-  width: 70%; /* Adjust the width as needed */
+  /* width: 70%; Adjust the width as needed */
   margin: 0 auto; /* Center the carousel */
   margin-top: 100px;
   margin-bottom: 100px;
-  color: transparent; /* Set the background to transparent */
 }
+
+@media (max-width: 1200px) {
+  .threeJsSceneContainer {
+    display: none; /* Hide the container for smaller viewports */
+  }
+}
+
+
 /* .bannerText {
   opacity: 0;
   animation-name: fadeIn;
