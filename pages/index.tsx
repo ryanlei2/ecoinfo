@@ -19,6 +19,8 @@ const Home: NextPage = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isHovered1, setIsHovered1] = useState(false); // State for first card hover
   const [isHovered2, setIsHovered2] = useState(false); // State for second card hover
+  const [isHovered3, setIsHovered3] = useState(false); // State for third card hover
+
 
   const router = useRouter();
 
@@ -208,9 +210,9 @@ const Home: NextPage = () => {
         </Row>
         </div>
       </div>
-      <div className={styles.carouselWrapper}style={{
-        background: 'black'
-      }}>
+      <div className={`${styles.carouselWrapper} ${isHovered3 ? styles.cardHover : ''}`} 
+                  onMouseEnter={() => setIsHovered3(true)}
+                  onMouseLeave={() => setIsHovered3(false)}>
       <Carousel interval={3000}>
       <Carousel.Item>
         <img
