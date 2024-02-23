@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from 'react'
 import heroImage from '../assets/heroVector.png'; 
 import * as THREE from 'three';
 import { OutlineEffect } from 'three/examples/jsm/effects/OutlineEffect.js'; // Import OutlineEffect
+import { Carousel } from 'react-bootstrap';
 
 
 
@@ -16,6 +17,9 @@ const Home: NextPage = () => {
 
   const mountRef = useRef<HTMLDivElement | null>(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [isHovered1, setIsHovered1] = useState(false); // State for first card hover
+  const [isHovered2, setIsHovered2] = useState(false); // State for second card hover
+
   const router = useRouter();
 
   useEffect(() => {
@@ -158,9 +162,92 @@ const Home: NextPage = () => {
       </div>
       <div className={styles.cta} style={{ background: 'linear-gradient(to bottom, rgb(220,255,230), rgb(255, 255, 255))'}}>
         <div className={styles.container2}>
-          
+        <Row style={{
+          justifyContent:'center',
+        }}>
+          <Card className={`${styles.card} ${isHovered1 ? styles.cardHover : ''}`} 
+                  onMouseEnter={() => setIsHovered1(true)}
+                  onMouseLeave={() => setIsHovered1(false)}
+                border="success" style={{ width: '40rem', marginRight: '100px' }}>
+            <Card.Img variant="top" src='https://cdn.discordapp.com/attachments/1046981658617860186/1087508397890478272/faq4.png' style={{marginBottom: '50px', marginTop: '40px'}}/>
+            <Card.Body>
+              <Card.Title className='display-6'
+              style={{
+                fontWeight:'bold',
+                fontSize: '70px'
+              }}
+              >FAQ</Card.Title>
+              <Card.Text style={{
+                fontSize:'2.7rem'
+              }}>
+                Have a question you need answered?
+              </Card.Text>
+                <Link href="/faq">
+                  <Button style={{height: '50px', width: '100px', fontSize: '1rem', marginBottom:'40px'}} variant="primary">Click Here</Button>
+                </Link>
+            </Card.Body>
+          </Card>
+          <Card className={`${styles.card} ${isHovered2 ? styles.cardHover : ''}`} 
+                  onMouseEnter={() => setIsHovered2(true)}
+                  onMouseLeave={() => setIsHovered2(false)} 
+                border="success" style={{ width: '40rem', marginLeft:'100px' }}>
+            <Card.Img style={{marginBottom: '50px', marginTop: '40px'}} variant="top" src="https://cdn.discordapp.com/attachments/1046981658617860186/1087514783252762654/catalog2.png" />
+            <Card.Body>
+              <Card.Title className='display-6'
+              style={{
+                fontWeight:'bold',
+                fontSize: '70px'
+              }}
+              >Pricing</Card.Title>
+              <Card.Text style={{
+                fontSize:'2.7rem'
+              }}>
+                Take a look at some of the costs with green energy!
+              </Card.Text>              
+              <Link href="/cost">
+                  <Button style={{height: '50px', width: '100px', fontSize: '1rem'}} variant="primary">Click Here</Button>
+                </Link>
+            </Card.Body>
+          </Card>
+        </Row>
         </div>
-        
+      </div>
+      <div className={styles.carouselWrapper}>
+      <Carousel interval={3000}>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://via.placeholder.com/800x400"
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://via.placeholder.com/800x400"
+          alt="Second slide"
+        />
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://via.placeholder.com/800x400"
+          alt="Third slide"
+        />
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
       </div>
       </main>
   );
