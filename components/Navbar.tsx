@@ -5,6 +5,8 @@ import { useRouter } from 'next/router'
 import Image from 'next/image';
 import favicon from '../assets/favicon.ico'
 import styles from '../styles/navbar.module.css'
+import SiteSearch360 from 'site-search-360-react';
+
 
 const NavbarComp = () => {
   return (
@@ -35,10 +37,7 @@ const NavbarComp = () => {
               marginLeft: '30px'
             }}>
               <Nav className="mx-auto parent">
-                <Nav.Link href='/faq' className={`${styles.brandIconHover}`} aria-current="page" style={{marginRight:'3vw'}}>
-                  Home
-                </Nav.Link>
-                <Nav.Link href='/about' className={`${styles.brandIconHover}`} aria-current="page" style={{marginRight:'3vw'}}>
+                <Nav.Link href='/info' className={`${styles.brandIconHover}`} aria-current="page" style={{marginRight:'3vw'}}>
                   Info
                 </Nav.Link>
                 <NavDropdown title="Practices" id="basic-nav-dropdown" style={{marginRight:'3vw'}}>
@@ -64,21 +63,10 @@ const NavbarComp = () => {
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
-            <Form className="d-flex">
-                  <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-                    style={{
-                      backgroundColor:'#ADFE44',
-                    }}
-                  />
-                <Button variant="outline-success" className={`${styles.brandIconHover}`}>Go</Button>
-              </Form>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
       </Container>
-      
+      <SiteSearch360 siteId="precious-squirrel-0935af.netlify.app" />
+      <script async src="https://js.sitesearch360.com/plugin/bundle/50413.js"></script>
     </Navbar>
   );
 }

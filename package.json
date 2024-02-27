@@ -22,6 +22,7 @@
     "react-firebase-hooks": "^5.1.1",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.9.0",
+    "site-search-360-react": "^0.3.3",
     "three": "^0.161.0"
   },
   "devDependencies": {
