@@ -10,6 +10,7 @@ import heroImage from '../assets/heroVector.png';
 import * as THREE from 'three';
 import { OutlineEffect } from 'three/examples/jsm/effects/OutlineEffect.js'; // Import OutlineEffect
 import { Carousel } from 'react-bootstrap';
+import HexagonButton from '../components/HexagonButton'
 
 
 
@@ -249,6 +250,7 @@ const Home: NextPage = () => {
       </Carousel.Item>
     </Carousel>
       </div>
+      <HexagonButton/>
       </main>
   );
 }
