@@ -66,7 +66,6 @@ const NavbarComp = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
       </Container>
       <SiteSearch360 siteId="precious-squirrel-0935af.netlify.app" />
-      <script async src="https://js.sitesearch360.com/plugin/bundle/50413.js"></script>
     </Navbar>
   );
 }
