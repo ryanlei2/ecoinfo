@@ -30,9 +30,9 @@ const Footer = () => {
                         <Col>
                             <h4>TSA</h4>
                             <ul style={{ listStyleType: 'none', padding: 0 }}>
-                                <li><a href="https://docs.google.com/document/d/1FB7pbYv7O_xc7sB7Qio5c6YJ1IpffnqgwUpjVjGep5c/edit?usp=sharing" target="_blank">Work Log</a></li>
-                                <li><a href="https://imgur.com/a/94zmCft" target="_blank">Student Copyright Checklist</a></li>
-                                <li><a href="https://richland.rsd.edu/" target="_blank">Richland High School</a></li>
+                                <li><a href="https://docs.google.com/document/d/1FB7pbYv7O_xc7sB7Qio5c6YJ1IpffnqgwUpjVjGep5c/edit?usp=sharing" target="_blank" rel="noreferrer">Work Log</a></li>
+                                <li><a href="https://imgur.com/a/94zmCft" target="_blank" rel="noreferrer">Student Copyright Checklist</a></li>
+                                <li><a href="https://richland.rsd.edu/" target="_blank" rel="noreferrer">Richland High School</a></li>
                             </ul>
                         </Col>
                     </Row>

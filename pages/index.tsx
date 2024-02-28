@@ -182,14 +182,14 @@ const Home: NextPage = () => {
             <Card.Img
               variant="top"
               src="https://www.verdeenergy.com/wp-content/uploads/2023/06/questions-Verde-Energy-FAQ.png"
-              style={{ marginBottom: '50px', marginTop: '40px', width:'300px', height: '200px' }}
+              style={{ marginBottom: '50px', marginTop: '40px', width:'20vmin', height: '20vmin' }}
             />
               <Card.Body style={{ textAlign: 'center' }}>
                 <Card.Title
                   className="display-6"
                   style={{
                     fontWeight: 'bold',
-                    fontSize: '2.7rem',
+                    fontSize: '5vmin',
                   }}
                 >
                   FAQ
@@ -230,14 +230,14 @@ const Home: NextPage = () => {
             <Card.Img
               variant="top"
               src="https://static.vecteezy.com/system/resources/previews/027/515/395/non_2x/a-green-line-arrow-pointing-upwards-on-the-chart-symbol-of-the-chart-having-an-upward-trend-illustration-of-a-business-chart-vector.jpg"
-              style={{ marginBottom: '50px', marginTop: '40px', width:'300px', height: '200px' }}
+              style={{ marginBottom: '50px', marginTop: '40px', width:'20vmin', height: '20vmin' }}
             />
               <Card.Body style={{ textAlign: 'center' }}>
                 <Card.Title
                   className="display-6"
                   style={{
                     fontWeight: 'bold',
-                    fontSize: '2.7rem',
+                    fontSize: '5vmin',
                   }}
                 >
                   Pricing
