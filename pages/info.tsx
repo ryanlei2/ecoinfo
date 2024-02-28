@@ -24,7 +24,7 @@ const Faq = () => {  return (
         <h3>What is Green Energy?</h3>
         Green energy refers to energy generated through methods that preserve the natural environment, which can wind, water, or solar, or other various forms of natural energy sources.
         <br/><br/>
-        Green energy is harnessed from renewable sources that do not deplete over time and do not emit pollutants during production, unlike fossil fuels; however, it&apos;s important to note that not all energy sources labeled as renewable are inherently green. For instance, while power generation from sustainable forest biomass is renewable, the CO2 emissions from the combustion process make it less environmentally friendly. Green energy stands out as the most eco-friendly resource available today, with minimal ongoing environmental impact, but it's up to <strong>you</strong> as home owners to take control of its power.
+        Green energy is harnessed from renewable sources that do not deplete over time and do not emit pollutants during production, unlike fossil fuels; however, it&apos;s important to note that not all energy sources labeled as renewable are inherently green. For instance, while power generation from sustainable forest biomass is renewable, the CO2 emissions from the combustion process make it less environmentally friendly. Green energy stands out as the most eco-friendly resource available today, with minimal ongoing environmental impact, but it&apos;s up to <strong>you</strong> as home owners to take control of its power.
         <br/><br/><br/><br/>
         <figure>
           <Image 
