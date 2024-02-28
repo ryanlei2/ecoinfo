@@ -24,7 +24,7 @@ const Home: NextPage = () => {
 
 
   const router = useRouter();
-
+// i made this
   useEffect(() => {
     // This checks if the code is running on the client
     if (typeof window === 'undefined' || !mountRef.current) return;
@@ -164,49 +164,101 @@ const Home: NextPage = () => {
         <Row style={{
           justifyContent:'center',
         }}>
-          <Card className={`${styles.card} ${isHovered1 ? styles.cardHover : ''}`} 
-                  onMouseEnter={() => setIsHovered1(true)}
-                  onMouseLeave={() => setIsHovered1(false)}
-                border="success" style={{ width: '40vw', height:'30vh', marginRight: '100px' }}>
-            <Card.Img variant="top" src='https://cdn.discordapp.com/attachments/1046981658617860186/1087508397890478272/faq4.png' style={{marginBottom: '50px', marginTop: '40px'}}/>
-            <Card.Body>
-              <Card.Title className='display-6'
-              style={{
-                fontWeight:'bold',
-                fontSize: '2.7rem'
-              }}
-              >FAQ</Card.Title>
-              <Card.Text style={{
-                fontSize:'100%'
-              }}>
-                Have a question you need answered?
-              </Card.Text>
-                <Link href="/faq">
-                  <Button style={{height: '55px', width: '100px', fontSize: '1rem', marginBottom:'40px'}} variant="primary">Click Here</Button>
+          <Card
+            className={`${styles.card} ${isHovered1 ? styles.cardHover : ''}`}
+            onMouseEnter={() => setIsHovered1(true)}
+            onMouseLeave={() => setIsHovered1(false)}
+            border="success"
+            style={{
+              width: '40vw',
+              height: '100%',
+              marginLeft: '100px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center', // Center vertically
+              marginRight: '50px'
+            }}
+          >
+            <Card.Img
+              variant="top"
+              src="https://www.verdeenergy.com/wp-content/uploads/2023/06/questions-Verde-Energy-FAQ.png"
+              style={{ marginBottom: '50px', marginTop: '40px', width:'300px', height: '200px' }}
+            />
+              <Card.Body style={{ textAlign: 'center' }}>
+                <Card.Title
+                  className="display-6"
+                  style={{
+                    fontWeight: 'bold',
+                    fontSize: '2.7rem',
+                  }}
+                >
+                  FAQ
+                </Card.Title>
+                <Card.Text style={{ fontSize: '100%' }}>
+                  Have a question you need answered?
+                </Card.Text>
+                <Link href="/info">
+                  <Button
+                    style={{
+                      height: '65px',
+                      width: '100px',
+                      fontSize: '1rem',
+                      marginBottom: '40px',
+                    }}
+                    variant="primary"
+                  >
+                    Click Here
+                  </Button>
                 </Link>
-            </Card.Body>
+              </Card.Body>
           </Card>
-          <Card className={`${styles.card} ${isHovered2 ? styles.cardHover : ''}`} 
-                  onMouseEnter={() => setIsHovered2(true)}
-                  onMouseLeave={() => setIsHovered2(false)} 
-                border="success" style={{ width: '40vw', height: '30vh', marginLeft:'100px' }}>
-            <Card.Img style={{marginBottom: '50px', marginTop: '40px'}} variant="top" src="https://cdn.discordapp.com/attachments/1046981658617860186/1087514783252762654/catalog2.png" />
-            <Card.Body>
-              <Card.Title className='display-6'
-              style={{
-                fontWeight:'bold',
-                fontSize: '2.7rem'
-              }}
-              >Pricing</Card.Title>
-              <Card.Text style={{
-                fontSize:'100%'
-              }}>
-                Take a look at some of the costs with green energy!
-              </Card.Text>              
-              <Link href="/cost">
-                  <Button style={{height: '55px', width: '100px', fontSize: '1rem'}} variant="primary">Click Here</Button>
+          <Card
+            className={`${styles.card} ${isHovered2 ? styles.cardHover : ''}`}
+            onMouseEnter={() => setIsHovered2(true)}
+            onMouseLeave={() => setIsHovered2(false)}
+            border="success"
+            style={{
+              width: '40vw',
+              height: '100%',
+              marginRight: '100px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center', // Center vertically
+              marginLeft: '50px'
+            }}
+          >
+            <Card.Img
+              variant="top"
+              src="https://static.vecteezy.com/system/resources/previews/027/515/395/non_2x/a-green-line-arrow-pointing-upwards-on-the-chart-symbol-of-the-chart-having-an-upward-trend-illustration-of-a-business-chart-vector.jpg"
+              style={{ marginBottom: '50px', marginTop: '40px', width:'300px', height: '200px' }}
+            />
+              <Card.Body style={{ textAlign: 'center' }}>
+                <Card.Title
+                  className="display-6"
+                  style={{
+                    fontWeight: 'bold',
+                    fontSize: '2.7rem',
+                  }}
+                >
+                  Pricing
+                </Card.Title>
+                <Card.Text style={{ fontSize: '100%' }}>
+                  Take a look at some of the costs of green energy!
+                </Card.Text>
+                <Link href="/faq">
+                  <Button
+                    style={{
+                      height: '65px',
+                      width: '100px',
+                      fontSize: '1rem',
+                      marginBottom: '40px',
+                    }}
+                    variant="primary"
+                  >
+                    Click Here
+                  </Button>
                 </Link>
-            </Card.Body>
+              </Card.Body>
           </Card>
         </Row>
         </div>

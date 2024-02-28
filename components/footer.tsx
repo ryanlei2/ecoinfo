@@ -24,23 +24,15 @@ const Footer = () => {
                 <Container fluid>
                     <Row>
                         <Col>
-                            <h4>About Us</h4>
-                            <ul style={{ listStyleType: 'none', padding: 0 }}>
-                                <li><a href="#">Link 1</a></li>
-                                <li><a href="#">Link 2</a></li>
-                                <li><a href="#">Link 3</a></li>
-                            </ul>
-                        </Col>
-                        <Col>
                             <h4>Made By</h4>
                             <p>Designed and Coded with ❤️💛❤️ by RHS © 2024</p>
                         </Col>
                         <Col>
                             <h4>TSA</h4>
                             <ul style={{ listStyleType: 'none', padding: 0 }}>
-                                <li><a href="#">Link 1</a></li>
-                                <li><a href="#">Link 2</a></li>
-                                <li><a href="#">Link 3</a></li>
+                                <li><a href="https://docs.google.com/document/d/1FB7pbYv7O_xc7sB7Qio5c6YJ1IpffnqgwUpjVjGep5c/edit?usp=sharing" target="_blank">Work Log</a></li>
+                                <li><a href="https://imgur.com/a/94zmCft" target="_blank">Student Copyright Checklist</a></li>
+                                <li><a href="https://richland.rsd.edu/" target="_blank">Richland High School</a></li>
                             </ul>
                         </Col>
                     </Row>

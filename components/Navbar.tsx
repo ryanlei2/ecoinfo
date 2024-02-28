@@ -9,6 +9,9 @@ import SiteSearch360 from 'site-search-360-react';
 
 
 const NavbarComp = () => {
+  const dropdownItemStyle = {
+    fontSize: '27px', // Adjust the font size as needed
+  };
   return (
     <Navbar className={`${styles.navBar} main white nav-margins`} expand="lg" style={{
     }}>
@@ -41,17 +44,17 @@ const NavbarComp = () => {
                   Info
                 </Nav.Link>
                 <NavDropdown title="Practices" id="basic-nav-dropdown" style={{marginRight:'3vw'}}>
-                  <NavDropdown.Item href="#action/3.1">
+                  <NavDropdown.Item href="/windTurbine" style={dropdownItemStyle}>
                     Wind Turbine
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
+                  <NavDropdown.Item href="/solarPanel" style={dropdownItemStyle}>
                     Solar Panel
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
+                  <NavDropdown.Item href="/underGroundWell" style={dropdownItemStyle}>
                     Underground Well
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href='/practices'>
+                  <NavDropdown.Item href='/practices' style={dropdownItemStyle}>
                     All Practices
                 </NavDropdown.Item>
               </NavDropdown>
