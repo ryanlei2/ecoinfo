@@ -68,7 +68,7 @@ const NavbarComp = () => {
             </Navbar.Collapse>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
       </Container>
-      <SiteSearch360 siteId="https://precious-squirrel-0935af.netlify.app/" />
+      <SiteSearch360 siteId="precious-squirrel-0935af.netlify.app_1" />
     </Navbar>
   );
 }
