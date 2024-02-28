@@ -68,7 +68,7 @@ const NavbarComp = () => {
             </Navbar.Collapse>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
       </Container>
-      <SiteSearch360 siteId="https://ecoinfo-8aj3veeaz-ryanlei2s-projects.vercel.app/" />
+      <SiteSearch360 siteId="https://ecoinfo.vercel.app/" />
     </Navbar>
   );
 }
