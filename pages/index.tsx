@@ -271,63 +271,65 @@ const Home: NextPage = () => {
       <div className={`${styles.carouselWrapper} ${isHovered3 ? styles.cardHover : ''}`} 
                   onMouseEnter={() => setIsHovered3(true)}
                   onMouseLeave={() => setIsHovered3(false)}>
+      <h1 style={{display: 'flex', justifyContent: 'center'}}>The Latest In Green</h1>
       <Carousel interval={3000} fade className={styles.carousel}>
-      <Carousel.Item className={styles.windowSize}>
-        <div className={styles.zoomEffect}>
-          <Image 
-          className=""
-          style={{
-            width: '100%',
-            height: '100%',
-            pointerEvents: 'none',
-          }}
-          src={workersSlide}
-          alt='workers at plant'
-        />
-        </div>
-        <Carousel.Caption>
-          <h3>Renewable Growth</h3>
-          <p>Wind and solar power are now expected to overtake coal by 2025 as the world&apos;s largest sources of electricity.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item className={styles.windowSize}>
-      <div className={styles.zoomEffect}>
-        <Image 
-        className=""
-        style={{
-          width: '100%',
-          height: '100%',
-          pointerEvents: 'none',
-        }}
-        src={projectSolar}
-        alt='solar'
-      />
+        <Carousel.Item className={styles.windowSize}>
+          <div className={styles.zoomEffect}>
+            <Image 
+            className=""
+            style={{
+              width: '100%',
+              height: '100%',
+              pointerEvents: 'none',
+            }}
+            src={workersSlide}
+            alt='workers at plant'
+          />
+          </div>
+          <Carousel.Caption>
+            <h3>Renewable Growth</h3>
+            <p>Wind and solar power are now expected to overtake coal by 2025 as the world&apos;s largest sources of electricity.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item className={styles.windowSize}>
+          <div className={styles.zoomEffect}>
+            <Image 
+            className=""
+            style={{
+              width: '100%',
+              height: '100%',
+              pointerEvents: 'none',
+            }}
+            src={projectSolar}
+            alt='solar'
+          />
+          </div>
+          <Carousel.Caption>
+            <h3>Rural and Remote Clean Energy</h3>
+            <p>The U.S. Department of Energy (DOE) announced more than $366 million for 17 projects across 20 states and 30 Tribal Nations and communities</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item className={styles.windowSize}>
+          <div className={styles.zoomEffect}>
+            <Image 
+              className=""
+              style={{
+                width: '100%',
+                height: '100%',
+                pointerEvents: 'none',
+              }}
+              src={installPanels}
+              alt='installation of solar panels'
+            />
+          </div>
+            <Carousel.Caption>
+              <h3>Another Banner Year in Solar</h3>
+              <p>The International Energy Agency (IEA) projects more than 440 gigawatts of renewable energy to be added, which is more than the entirety of the power capacity of Germany and Spain.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
       </div>
-        <Carousel.Caption>
-          <h3>Rural and Remote Clean Energy</h3>
-          <p>The U.S. Department of Energy (DOE) announced more than $366 million for 17 projects across 20 states and 30 Tribal Nations and communities</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item className={styles.windowSize}>
-      <div className={styles.zoomEffect}>
-        <Image 
-          className=""
-          style={{
-            width: '100%',
-            height: '100%',
-            pointerEvents: 'none',
-          }}
-          src={installPanels}
-          alt='installation of solar panels'
-        />
-      </div>
-        <Carousel.Caption>
-          <h3>Another Banner Year in Solar</h3>
-          <p>The International Energy Agency (IEA) projects more than 440 gigawatts of renewable energy to be added, which is more than the entirety of the power capacity of Germany and Spain.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-      </div>
+      
       <HexagonButton/>
       </main>
   );
