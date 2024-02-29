@@ -287,7 +287,7 @@ const Home: NextPage = () => {
         </div>
         <Carousel.Caption>
           <h3>Renewable Growth</h3>
-          <p>Wind and solar power are now expected to overtake coal by 2025 as the world's largest sources of electricity.</p>
+          <p>Wind and solar power are now expected to overtake coal by 2025 as the world&apos;s largest sources of electricity.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item className={styles.windowSize}>
