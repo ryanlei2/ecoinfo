@@ -68,7 +68,7 @@ const NavbarComp = () => {
             </Navbar.Collapse>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
       </Container>
-      <SiteSearch360 siteId="Project_980" />
+      <SiteSearch360 siteId="tsa-eco-info.netlify.app" />
     </Navbar>
   );
 }
