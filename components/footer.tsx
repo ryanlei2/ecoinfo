@@ -38,9 +38,12 @@ const Footer = () => {
                     </Row>
                 </Container>
             </div>
-            <div className={styles.cube}>
-                <Cube /> {/* Include the Cube component */}
-            </div>
+            <figure>
+                <div className={styles.cube}>
+                    <Cube /> {/* Include the Cube component */}
+                </div>
+            </figure>
+            
         </footer>
     );
 };

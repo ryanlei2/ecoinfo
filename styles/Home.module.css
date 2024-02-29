@@ -94,11 +94,44 @@
   margin: 0 auto; /* Center the carousel */
   margin-top: 100px;
   margin-bottom: 100px;
+  border-radius: 300px;
 }
 
+/* Hide the container for smaller viewports */
 @media (max-width: 1200px) {
   .threeJsSceneContainer {
-    display: none; /* Hide the container for smaller viewports */
+    display: none; 
+  }
+}
+
+.zoomEffect {
+  animation: zoom 3s ease-in infinite alternate; /* Adjust animation duration and timing as needed */
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1); /* Start with normal size */
+  }
+  100% {
+    transform: scale(1.1); /* Zoom to 110% size */
+  }
+}
+.windowSize {
+  width: 900px;
+  height: 600px;
+  background-color: black;
+}
+@media (max-width: 1200px) {
+  .windowSize {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 800px) {
+  .windowSize {
+    width: 300px;
+    height: 300px;
   }
 }
 

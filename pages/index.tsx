@@ -11,6 +11,10 @@ import * as THREE from 'three';
 import { OutlineEffect } from 'three/examples/jsm/effects/OutlineEffect.js'; // Import OutlineEffect
 import { Carousel } from 'react-bootstrap';
 import HexagonButton from '../components/HexagonButton'
+import projectSolar from '../assets/projectSolar.jpeg'
+import workersSlide from '../assets/workersSlide.jpeg'
+import installPanels from '../assets/installPanels.webp'
+
 
 
 
@@ -29,18 +33,19 @@ const Home: NextPage = () => {
     // This checks if the code is running on the client
     if (typeof window === 'undefined' || !mountRef.current) return;
     const canvas = document.createElement('canvas');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = 1000;
+    canvas.height = 1000;
     
     // Draw onto the canvas (create a solid color circle)
     const ctx = canvas.getContext('2d')!;
+    
     const gradient = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, Math.min(canvas.width, canvas.height) / 2);
     gradient.addColorStop(0, 'green');
     gradient.addColorStop(1, '#e6ffe6');
 
     ctx.beginPath();
     // Adjust the radius calculation to cover the entire viewport
-    const radius = 700;
+    const radius = 500;
     ctx.arc(canvas.width / 2, canvas.height / 2, radius, 0, Math.PI * 2);
     ctx.fillStyle = gradient;
     ctx.fill();
@@ -51,7 +56,7 @@ const Home: NextPage = () => {
     const texture = new THREE.CanvasTexture(canvas);
     scene.background = texture;
     
-    const width = 680; // Example fixed width
+    const width = 530; // Example fixed width
     const height = 600; // Example fixed height
 
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 100);
@@ -69,7 +74,7 @@ const Home: NextPage = () => {
     const material = new THREE.MeshStandardMaterial({
         color: 0x90EE90,
         roughness: 0.5,
-        metalness: 0.5,
+        metalness: 0.6,
     });
     const sphere = new THREE.Mesh(geometry, material);
     // Enable shadow casting and receiving
@@ -86,7 +91,7 @@ const Home: NextPage = () => {
     // Enable shadow casting by the light
     directionalLight.castShadow = true;
     // Adjust shadow map size for darker shadows
-    directionalLight.shadow.mapSize.set(1024, 1024); // Width, Height
+    directionalLight.shadow.mapSize.set(2,4); // Width, Height
     // Adjust shadow bias for finer control over shadow appearance
     directionalLight.shadow.bias = -0.001;
     scene.add(directionalLight);
@@ -152,8 +157,8 @@ const Home: NextPage = () => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           style={{
-            boxShadow: isHovered ? '0 4px 8px 0 rgba(0, 0, 0, 0.2)' : 'none',
-            transform: isHovered ? 'scale(1.1)' : 'scale(1)', // Apply scaling when hovered
+            transform: isHovered ? 'scale(1.05)' : 'scale(1)', // Apply scaling when hovered
+            //boxShadow: isHovered ? '0 4px 8px 0 rgba(0, 0, 0, 0.2)' : 'none',
             transition: 'transform 0.3s ease', // Add a smooth transition effect
           }}>
           </div>
@@ -266,38 +271,59 @@ const Home: NextPage = () => {
       <div className={`${styles.carouselWrapper} ${isHovered3 ? styles.cardHover : ''}`} 
                   onMouseEnter={() => setIsHovered3(true)}
                   onMouseLeave={() => setIsHovered3(false)}>
-      <Carousel interval={3000}>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://via.placeholder.com/800x400"
-          alt="First slide"
+      <Carousel interval={3000} fade className={styles.carousel}>
+      <Carousel.Item className={styles.windowSize}>
+        <div className={styles.zoomEffect}>
+          <Image 
+          className=""
+          style={{
+            width: '100%',
+            height: '100%',
+            pointerEvents: 'none',
+          }}
+          src={workersSlide}
+          alt='workers at plant'
         />
+        </div>
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Renewable Growth</h3>
+          <p>Wind and solar power are now expected to overtake coal by 2025 as the world's largest sources of electricity.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://via.placeholder.com/800x400"
-          alt="Second slide"
-        />
+      <Carousel.Item className={styles.windowSize}>
+      <div className={styles.zoomEffect}>
+        <Image 
+        className=""
+        style={{
+          width: '100%',
+          height: '100%',
+          pointerEvents: 'none',
+        }}
+        src={projectSolar}
+        alt='solar'
+      />
+      </div>
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Rural and Remote Clean Energy</h3>
+          <p>The U.S. Department of Energy (DOE) announced more than $366 million for 17 projects across 20 states and 30 Tribal Nations and communities</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://via.placeholder.com/800x400"
-          alt="Third slide"
+      <Carousel.Item className={styles.windowSize}>
+      <div className={styles.zoomEffect}>
+        <Image 
+          className=""
+          style={{
+            width: '100%',
+            height: '100%',
+            pointerEvents: 'none',
+          }}
+          src={installPanels}
+          alt='installation of solar panels'
         />
+      </div>
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          <h3>Another Banner Year in Solar</h3>
+          <p>The International Energy Agency (IEA) projects more than 440 gigawatts of renewable energy to be added, which is more than the entirety of the power capacity of Germany and Spain.</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

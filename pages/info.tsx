@@ -5,10 +5,10 @@ import HexagonButton from '../components/HexagonButton';
 import Image from 'next/image'
 import infoImage from '../assets/infoImage.jpg'
 import infographic from '../assets/infographic.png'
+import energyScale from '../assets/energyScale.png'
 
 const Faq = () => {  return (
     <Container>
-      <div className={styles.faqImage}>
         <Image 
             style={{
               width: '100%',
@@ -19,7 +19,6 @@ const Faq = () => {  return (
             src={infoImage}
             alt='Hero Image'
           />
-      </div>
       <div className={styles.faq}>
         <title>What is Green Energy?</title>
         <h3>What is Green Energy</h3>
@@ -45,7 +44,23 @@ const Faq = () => {  return (
         <br/><br/><br/><br/>
         <title>Why Go Green?</title>
         <h3>Why Go Green?</h3>
-        Customers often buy green power for its zero-emissions profile and carbon footprint reduction benefits. If they switch, they can potentially save money and 
+        Customers often buy green power for its zero-emissions profile and carbon footprint reduction benefits. If they switch, they can potentially save money and effort in the process of going green. These resources do not diminish over time such as the sun, wind, moving water, organic plant and waste material , and geothermal heat.
+        <br/><br/>
+        <figure>
+          <Image 
+              style={{
+                width: '100%',
+                height: '100%',
+                pointerEvents: 'none',
+                marginTop: ' 2rem'
+              }}
+              src={energyScale}
+              alt='green energy information'
+            />
+            <figcaption style={{
+              fontStyle: 'italic'
+            }}>How the US voluntary market views each energy source based on its impact.</figcaption>
+        </figure>
         <HexagonButton/>
       </div>
     </Container>

@@ -16,13 +16,13 @@ const Cube = () => {
         const geometry = new THREE.BoxGeometry();
         const material = new THREE.MeshNormalMaterial(); // Use MeshNormalMaterial for black edges
         const cube = new THREE.Mesh(geometry, material);
-        cube.scale.set(3, 3, 3); // Adjust cube scale
+        cube.scale.set(5, 5, 5); // Adjust cube scale
         scene.add(cube);
 
         const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // Add ambient light
         scene.add(ambientLight);
 
-        camera.position.set(2, 2, 5); // Adjust camera position
+        camera.position.set(5, 5, 5); // Adjust camera position
 
         const controls = new OrbitControls(camera, renderer.domElement); // Initialize OrbitControls
 
