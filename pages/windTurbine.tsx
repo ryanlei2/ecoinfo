@@ -40,7 +40,7 @@ const windTurbine = () => {  return (
 
             <title>Renewable Power</title>
             <h3>Renewable Power</h3>
-            Wind energy is a practically limitless renewable energy source because it draws on the natural movement of wind. As long as the sun continues to shine and the Earth's atmosphere exists, wind will be available to harness for energy. This is highly advantageous over other sources such as oil or natural gas, as they are limited resources. 
+            Wind energy is a practically limitless renewable energy source because it draws on the natural movement of wind. As long as the sun continues to shine and the Earth&apos;s atmosphere exists, wind will be available to harness for energy. This is highly advantageous over other sources such as oil or natural gas, as they are limited resources. 
 
             <br/><br/>
             
