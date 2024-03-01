@@ -34,7 +34,7 @@ const practices = () => {  return (
 
             <title>Limit Paper</title>
             <h3>Limit Paper Usage</h3>
-            It's a no-brainer that the trees that paper comes from need to be replenished in order to keep the world balanced. Since most of us today are tech-savvy, we should strive for paperless technology like a cloud-based file sharing system. Documents can also become online, as you can have a limited number of physical copies. Not wasting and throwing paper into recycling as opposed to the trash can also be beneficial, as reusable paper is better than trashed paper.
+            It&apos;s a no-brainer that the trees that paper comes from need to be replenished in order to keep the world balanced. Since most of us today are tech-savvy, we should strive for paperless technology like a cloud-based file sharing system. Documents can also become online, as you can have a limited number of physical copies. Not wasting and throwing paper into recycling as opposed to the trash can also be beneficial, as reusable paper is better than trashed paper.
 
             <br/><br/>
             <Image 
