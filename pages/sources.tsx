@@ -13,12 +13,12 @@ const sources = () => {  return (
                 margin: '0 auto' ,
                 paddingTop: '3rem'           
             }}>
-                Solar Panels
+                Sources
             </h1>
         </div>
         <div className={styles.sourcesPage}>
             <title>Sources</title>
-            <h3>Works Cited:</h3>
+            <h3>Gathered Information:</h3>
             Our information comes in courtesy from various reliable government and non-profit organizations. Here are their links:
             <br/>
             <Link href='https://www.cedarmanagementgroup.com/green-hoa-practices/' target="_blank" rel="noreferrer">Green Practices</Link>
