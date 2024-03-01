@@ -1,0 +1,23 @@
+.arrow {
+    position: relative;
+    bottom: 20px; /* Adjust position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 1s infinite alternate; /* Bounce animation */
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  
+  .arrowIcon {
+    font-size: 24px; /* Adjust size as needed */
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translate(-50%, 0);
+    }
+    100% {
+      transform: translate(-50%, 10px); /* Adjust bounce height as needed */
+    }
+  }
+  

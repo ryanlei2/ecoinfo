@@ -14,6 +14,8 @@ import HexagonButton from '../components/HexagonButton'
 import projectSolar from '../assets/projectSolar.jpeg'
 import workersSlide from '../assets/workersSlide.jpeg'
 import installPanels from '../assets/installPanels.webp'
+import Arrow from '../components/Arrow'; // Import the Arrow component
+
 
 
 
@@ -28,6 +30,13 @@ const Home: NextPage = () => {
 
 
   const router = useRouter();
+
+  const handleArrowClick = () => {
+    const faqSection = document.getElementById('faq-section');
+    if (faqSection) {
+      faqSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 // i made this
   useEffect(() => {
     // This checks if the code is running on the client
@@ -142,7 +151,9 @@ const Home: NextPage = () => {
           fontSize: '20px'
         }}>
           Discover eco-friendly practices, cost-effective solutions, and tax incentives for a sustainable future.
+        <Arrow onClick={handleArrowClick} />
         </Row>
+        
       </div>
         <div className={styles.rightHalf}>
           <Image 
@@ -164,7 +175,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className={styles.cta} style={{ background: 'linear-gradient(to bottom, rgb(220,255,230), rgb(255, 255, 255))'}}>
+      <div id="faq-section" className={styles.cta} style={{ background: 'linear-gradient(to bottom, rgb(220,255,230), rgb(255, 255, 255))'}}>
         <div className={styles.container2}>
         <Row style={{
           justifyContent:'center',
@@ -271,7 +282,7 @@ const Home: NextPage = () => {
       <div className={`${styles.carouselWrapper} ${isHovered3 ? styles.cardHover : ''}`} 
                   onMouseEnter={() => setIsHovered3(true)}
                   onMouseLeave={() => setIsHovered3(false)}>
-      <h1 style={{display: 'flex', justifyContent: 'center'}}>The Latest In Green</h1>
+      <h1 style={{display: 'flex',justifyContent: 'center'}}>The Latest In Green</h1>
       <Carousel interval={3000} fade className={styles.carousel}>
         <Carousel.Item className={styles.windowSize}>
           <div className={styles.zoomEffect}>

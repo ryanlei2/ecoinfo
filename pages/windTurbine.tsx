@@ -3,7 +3,8 @@ import { Container } from 'react-bootstrap'
 import styles from '../styles/windTurbine.module.css'
 import HexagonButton from '../components/HexagonButton';
 import Image from 'next/image'
-import infoImage from '../assets/infoImage.jpg' //placeholder
+import greenEarth from '../assets/greenEarth.png' //placeholder
+import windTurbines from '../assets/windTurbines.png' //placeholder
 
 
 const windTurbine = () => {  return (
@@ -28,7 +29,7 @@ const windTurbine = () => {  return (
                     pointerEvents: 'none',
                     marginTop: ' 2rem'
                 }}
-                src={infoImage}
+                src={windTurbines}
                 alt='Wind turbines standing in body of water'
                 />
                 <figcaption style={{
@@ -57,8 +58,8 @@ const windTurbine = () => {  return (
                     pointerEvents: 'none',
                     marginTop: ' 2rem'
                 }}
-                src={infoImage}
-                alt='Wind turbines standing in body of water'
+                src={greenEarth}
+                alt='hands holding up green earth'
             />
 
             <br/><br/>
