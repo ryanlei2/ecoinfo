@@ -1,13 +1,13 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 
-const taxes = () => {  return (
+const bioMassSystem = () => {  return (
     <Container>
         <div>
-        ALL da taxes
+            biomass
         </div>
     </Container>
     )
 }
 
-export default taxes
+export default bioMassSystem

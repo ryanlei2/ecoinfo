@@ -2,7 +2,6 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import HexagonButton from '../components/HexagonButton';
 import Image from 'next/image'
-import greenEarth from '../assets/greenEarth.png' //placeholder
 import styles from '../styles/solarPanel.module.css'
 import solarPanels from '../assets/solarPanels.jpeg' //placeholder
 import roofPanels from '../assets/roofPanels.jpeg' //placeholder
@@ -10,11 +9,15 @@ import installPanel from '../assets/installPanel.jpeg' //placeholder
 
 
 const solarPanel = () => {  return (
-    <Container>
+    <Container style={{backgroundColor: 'rgb(234,238,242)', maxWidth: '100%'}}>
         <div>
             <h1 style={{
-                marginTop: '2rem'
-            }}>Solar Panels</h1>
+                width: '65%',
+                margin: '0 auto' ,
+                paddingTop: '3rem'           
+            }}>
+                Solar Panels
+            </h1>
         </div>
         <div className={styles.solarPanelInfo}>
             <title>Solar Panels</title>

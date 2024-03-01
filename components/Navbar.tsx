@@ -10,7 +10,7 @@ import SiteSearch360 from 'site-search-360-react';
 
 const NavbarComp = () => {
   const dropdownItemStyle = {
-    fontSize: '27px', // Adjust the font size as needed
+    fontSize: '20px', // Adjust the font size as needed
   };
   return (
     <Navbar className={`${styles.navBar} main white nav-margins`} expand="lg" style={{
@@ -40,29 +40,30 @@ const NavbarComp = () => {
               marginLeft: '30px'
             }}>
               <Nav className="mx-auto parent">
-                <Nav.Link href='/info' className={`${styles.brandIconHover}`} aria-current="page" style={{marginRight:'3vw'}}>
+                <Nav.Link href='/info' className={`${styles.brandIconHover}`} aria-current="page" style={{marginRight:'3vw', fontSize: '20px'}}>
                   Info
                 </Nav.Link>
-                <NavDropdown title="Practices" id="basic-nav-dropdown" style={{marginRight:'3vw'}}>
+                <NavDropdown title="Practices" id="basic-nav-dropdown" style={{marginRight:'3vw', fontSize: '20px'}}>
                   <NavDropdown.Item href="/windTurbine" style={dropdownItemStyle}>
                     Wind Turbine
                   </NavDropdown.Item>
+                    <NavDropdown.Divider />
                   <NavDropdown.Item href="/solarPanel" style={dropdownItemStyle}>
                     Solar Panel
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="/underGroundWell" style={dropdownItemStyle}>
-                    Underground Well
+                    <NavDropdown.Divider />
+                  <NavDropdown.Item href="/bioMassSystem" style={dropdownItemStyle}>
+                    Biomass
                   </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href='/practices' style={dropdownItemStyle}>
-                    All Practices
-                </NavDropdown.Item>
+                  {/* <NavDropdown.Item href='/practices' style={dropdownItemStyle}>
+                    Other Practices
+                </NavDropdown.Item> */}
               </NavDropdown>
-                <Nav.Link href='/taxes' className={`${styles.brandIconHover}`} aria-current="page" style={{marginRight:'3vw'}}>
-                  Taxes
+                <Nav.Link href='/practices' className={`${styles.brandIconHover}`} aria-current="page" style={{marginRight:'3vw', fontSize: '20px'}}>
+                  Implementations{/*  how to install these thangs */}
                 </Nav.Link>
-                <Nav.Link href='/cost' className={`${styles.brandIconHover}`} aria-current="page" style={{marginRight:'3vw'}}>
-                  Cost
+                <Nav.Link href='/sources' className={`${styles.brandIconHover}`} aria-current="page" style={{marginRight:'3vw', fontSize: '20px'}}>
+                  Sources
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>

@@ -8,17 +8,34 @@ import infographic from '../assets/infographic.png'
 import energyScale from '../assets/energyScale.png'
 
 const Faq = () => {  return (
-    <Container>
-        <Image 
+    <Container style={{backgroundColor: 'rgb(234,238,242)', maxWidth: '100%'}}>
+      <div>
+            <h1 style={{
+                width: '65%',
+                margin: '0 auto' ,
+                paddingTop: '3rem'           
+            }}>
+                Basic Information
+            </h1>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        > 
+          <Image 
             style={{
-              width: '100%',
+              width: '60%',
               height: '100%',
               pointerEvents: 'none',
-              marginTop: ' 2rem'
+              marginTop: ' 2rem',
             }}
             src={infoImage}
             alt='Hero Image'
           />
+        </div>
+        
       <div className={styles.faq}>
         <title>What is Green Energy?</title>
         <h3>What is Green Energy</h3>
@@ -63,7 +80,7 @@ const Faq = () => {  return (
         </figure>
         <HexagonButton/>
       </div>
-    </Container>
+    </Container>    
   )
 }
 

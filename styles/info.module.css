@@ -3,4 +3,8 @@
     margin: 0 auto; /* This will center the div horizontally */
     margin-top: 3rem;
     line-height: 2.5; /* Adjust the value to increase or decrease the spacing */
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    padding: 50px;
+    /* font-size: 20px; */
 }

@@ -127,55 +127,60 @@ const Home: NextPage = () => {
 
   
   return (
-    <main className={styles.container}>
-      <div className={styles.hero}>{/* split this section into 2 parts: one for the text and the subtext, and one for the image */}
-      <div className={styles.leftHalf} style={{ position: 'relative', right: '-80px', zIndex: 2 }}> {/* Adjust the position and z-index */}
+    <main>
+      <div className={styles.container}>
+        <div className={styles.hero}>{/* split this section into 2 parts: one for the text and the subtext, and one for the image */}
+        <div className={styles.leftHalf} style={{ position: 'relative', right: '-80px', zIndex: 2 }}> {/* Adjust the position and z-index */}
 
-        <Row>
-          <strong>Empower your home with 
-            <span style={{
-              backgroundImage: 'linear-gradient(to right, #9effb8, #009933)',
-              WebkitBackgroundClip: 'text',
-              color: 'transparent'
-            }}> green </span> 
-            and 
-            <span style={{
-              backgroundImage: 'linear-gradient(to right, #9effb8, #009933)',
-              WebkitBackgroundClip: 'text',
-              color: 'transparent'
-            }}> clean </span> 
-            solutions.
-          </strong>
-        </Row>
-        <Row style={{
-          fontSize: '20px'
-        }}>
-          Discover eco-friendly practices, cost-effective solutions, and tax incentives for a sustainable future.
-        <Arrow onClick={handleArrowClick} />
-        </Row>
-        
-      </div>
-        <div className={styles.rightHalf}>
-          <Image 
-            style={{
-              width: '100%',
-              pointerEvents: 'none',
-            }}
-            src={heroImage}
-            alt='Hero Image'
-          />
-          <div ref={mountRef} className={styles.threeJsSceneContainer}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          style={{
-            transform: isHovered ? 'scale(1.05)' : 'scale(1)', // Apply scaling when hovered
-            //boxShadow: isHovered ? '0 4px 8px 0 rgba(0, 0, 0, 0.2)' : 'none',
-            transition: 'transform 0.3s ease', // Add a smooth transition effect
+          <Row>
+            <strong>Empower your home with 
+              <span style={{
+                backgroundImage: 'linear-gradient(to right, #9effb8, #009933)',
+                WebkitBackgroundClip: 'text',
+                color: 'transparent'
+              }}> green </span> 
+              and 
+              <span style={{
+                backgroundImage: 'linear-gradient(to right, #9effb8, #009933)',
+                WebkitBackgroundClip: 'text',
+                color: 'transparent'
+              }}> clean </span> 
+              solutions.
+            </strong>
+          </Row>
+          <Row style={{
+            fontSize: '20px'
           }}>
+            Discover eco-friendly practices, cost-effective solutions, and tax incentives for a sustainable future.
+          <Arrow onClick={handleArrowClick} />
+          </Row>
+          
+        </div>
+          <div className={styles.rightHalf}>
+            <Image 
+              style={{
+                width: '100%',
+                pointerEvents: 'none',
+              }}
+              src={heroImage}
+              alt='Hero Image'
+            />
+            <div ref={mountRef} className={styles.threeJsSceneContainer}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            style={{
+              transform: isHovered ? 'scale(1.05)' : 'scale(1)', // Apply scaling when hovered
+              //boxShadow: isHovered ? '0 4px 8px 0 rgba(0, 0, 0, 0.2)' : 'none',
+              transition: 'transform 0.3s ease', // Add a smooth transition effect
+            }}>
+            </div>
           </div>
         </div>
       </div>
-      <div id="faq-section" className={styles.cta} style={{ background: 'linear-gradient(to bottom, rgb(220,255,230), rgb(255, 255, 255))'}}>
+      
+      <div id="faq-section" className={styles.cta} style={{
+        // background: 'linear-gradient(to bottom, rgb(184,255,200), rgb(255, 255, 255))'
+        }}>
         <div className={styles.container2}>
         <Row style={{
           justifyContent:'center',
@@ -279,67 +284,72 @@ const Home: NextPage = () => {
         </Row>
         </div>
       </div>
-      <div className={`${styles.carouselWrapper} ${isHovered3 ? styles.cardHover : ''}`} 
-                  onMouseEnter={() => setIsHovered3(true)}
-                  onMouseLeave={() => setIsHovered3(false)}>
-      <h1 style={{display: 'flex',justifyContent: 'center'}}>The Latest In Green</h1>
-      <Carousel interval={3000} fade className={styles.carousel}>
-        <Carousel.Item className={styles.windowSize}>
-          <div className={styles.zoomEffect}>
-            <Image 
-            className=""
-            style={{
-              width: '100%',
-              height: '100%',
-              pointerEvents: 'none',
-            }}
-            src={workersSlide}
-            alt='workers at plant'
-          />
-          </div>
-          <Carousel.Caption>
-            <h3>Renewable Growth</h3>
-            <p>Wind and solar power are now expected to overtake coal by 2025 as the world&apos;s largest sources of electricity.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item className={styles.windowSize}>
-          <div className={styles.zoomEffect}>
-            <Image 
-            className=""
-            style={{
-              width: '100%',
-              height: '100%',
-              pointerEvents: 'none',
-            }}
-            src={projectSolar}
-            alt='solar'
-          />
-          </div>
-          <Carousel.Caption>
-            <h3>Rural and Remote Clean Energy</h3>
-            <p>The U.S. Department of Energy (DOE) announced more than $366 million for 17 projects across 20 states and 30 Tribal Nations and communities</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item className={styles.windowSize}>
-          <div className={styles.zoomEffect}>
-            <Image 
+      <div style={{display:'inline'}}>
+        <h1 style={{display: 'flex',justifyContent: 'center', marginTop: '200px'}}>The Latest In Green</h1>
+      </div>
+      <Container className={styles.wrapperwrapper}>
+        <div className={`${styles.carouselWrapper} ${isHovered3 ? styles.cardHover : ''}`} 
+                    onMouseEnter={() => setIsHovered3(true)}
+                    onMouseLeave={() => setIsHovered3(false)}>
+        <Carousel interval={3000} fade className={styles.carousel}>
+          <Carousel.Item className={styles.windowSize}>
+            <div className={styles.zoomEffect}>
+              <Image 
               className=""
               style={{
                 width: '100%',
                 height: '100%',
                 pointerEvents: 'none',
               }}
-              src={installPanels}
-              alt='installation of solar panels'
+              src={workersSlide}
+              alt='workers at plant'
             />
-          </div>
+            </div>
             <Carousel.Caption>
-              <h3>Another Banner Year in Solar</h3>
-              <p>The International Energy Agency (IEA) projects more than 440 gigawatts of renewable energy to be added, which is more than the entirety of the power capacity of Germany and Spain.</p>
+              <h3>Renewable Growth</h3>
+              <p>Wind and solar power are now expected to overtake coal by 2025 as the world&apos;s largest sources of electricity.</p>
             </Carousel.Caption>
           </Carousel.Item>
-        </Carousel>
-      </div>
+          <Carousel.Item className={styles.windowSize}>
+            <div className={styles.zoomEffect}>
+              <Image 
+              className=""
+              style={{
+                width: '100%',
+                height: '100%',
+                pointerEvents: 'none',
+              }}
+              src={projectSolar}
+              alt='solar'
+            />
+            </div>
+            <Carousel.Caption>
+              <h3>Rural and Remote Clean Energy</h3>
+              <p>The U.S. Department of Energy (DOE) announced more than $366 million for 17 projects across 20 states and 30 Tribal Nations and communities</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item className={styles.windowSize}>
+            <div className={styles.zoomEffect}>
+              <Image 
+                className=""
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  pointerEvents: 'none',
+                }}
+                src={installPanels}
+                alt='installation of solar panels'
+              />
+            </div>
+              <Carousel.Caption>
+                <h3>Another Banner Year in Solar</h3>
+                <p>The International Energy Agency (IEA) projects more than 440 gigawatts of renewable energy to be added, which is more than the entirety of the power capacity of Germany and Spain.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
+        </div>
+      </Container>
+      
       
       <HexagonButton/>
       </main>

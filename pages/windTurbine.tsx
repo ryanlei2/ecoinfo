@@ -8,11 +8,15 @@ import windTurbines from '../assets/windTurbines.png' //placeholder
 
 
 const windTurbine = () => {  return (
-    <Container>
+    <Container style={{backgroundColor: 'rgb(234,238,242)', maxWidth: '100%'}}>
         <div>
             <h1 style={{
-                marginTop: '2rem'
-            }}>Wind Turbines</h1>
+                width: '65%',
+                margin: '0 auto' ,
+                paddingTop: '3rem'           
+            }}>
+                Wind Turbines
+            </h1>
         </div>
         <div className={styles.windTurbineInfo}>
             <title>Wind Turbines</title>

@@ -4,15 +4,17 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Ensure the container takes up at least the full height of the viewport */
-  background: linear-gradient(to bottom, rgb(240, 255, 241), rgb(200, 255, 220)); /* Apply linear gradient */
+  background: linear-gradient(to bottom, rgb(240, 255, 241), rgb(184,255,200)); /* Apply linear gradient */
 }
 .container2 {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  margin-top: 100px;
+  padding-top: 100px;
   margin-bottom: 100px;
   min-height: 50vh; /* Ensure the container takes up at least the full height of the viewport */
-  background: linear-gradient(to bottom, rgb(200, 255, 220), rgb(255, 255, 255)); /* Apply linear gradient */
+  background: linear-gradient(to bottom, rgb(184,255,200), rgb(255, 255, 255)); 
+  /* Apply linear gradient */
 }
 
 .hero,
@@ -77,7 +79,7 @@
   transition: transform 0.3s ease-out;
 }
 .cardHover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 @keyframes fadeIn {
@@ -88,13 +90,17 @@
     opacity: 1;
   }
 }
-
-.carouselWrapper {
-  /* width: 70%; Adjust the width as needed */
-  margin: 0 auto; /* Center the carousel */
-  margin-top: 100px;
-  margin-bottom: 100px;
+.wrapperwrapper{
   border-radius: 300px;
+  width: 80%;
+  background-color: rgb(220, 220, 220);
+}
+.carouselWrapper {
+  width: 70%; 
+  display: flex;
+  justify-content: center;
+  margin: 0 auto; /* Center the carousel */
+  margin-bottom: 300px;
 }
 
 /* Hide the container for smaller viewports */
