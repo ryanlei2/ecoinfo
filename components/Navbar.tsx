@@ -52,7 +52,7 @@ const NavbarComp = () => {
                     Solar Panel
                   </NavDropdown.Item>
                     <NavDropdown.Divider />
-                  <NavDropdown.Item href="/bioMassSystem" style={dropdownItemStyle}>
+                  <NavDropdown.Item href="/Biomass" style={dropdownItemStyle}>
                     Biomass
                   </NavDropdown.Item>
                   {/* <NavDropdown.Item href='/practices' style={dropdownItemStyle}>
