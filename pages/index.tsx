@@ -261,12 +261,12 @@ const Home: NextPage = () => {
                     fontSize: '5vmin',
                   }}
                 >
-                  Pricing
+                  Practices
                 </Card.Title>
                 <Card.Text style={{ fontSize: '100%' }}>
-                  Take a look at some of the costs of green energy!
+                  Take a look at how <strong>you</strong> can add these!
                 </Card.Text>
-                <Link href="/faq">
+                <Link href="/practices">
                   <Button
                     style={{
                       height: '65px',
